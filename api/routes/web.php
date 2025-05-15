@@ -37,7 +37,6 @@ Route::get('/weather', function (Request $request) {
     $apiKey = env('OPENWEATHERMAP_API_KEY');
     $weatherApiUrl = env('OPENWEATHERMAP_API_URL');
 
-    // Get 5-day / 3-hour forecast
     $response = Http::get("$weatherApiUrl/forecast", [
         'q' => $city,
         'appid' => $apiKey,
@@ -50,35 +49,6 @@ Route::get('/weather', function (Request $request) {
 
     return $response->json();
 });
-
-
-
-
-// use Illuminate\Support\Facades\Http;
-
-// Route::get('/weather', function (Request $request) {
-//     $city = $request->query('city');
-
-//     if (!$city) {
-//         return response()->json(['error' => 'City is required'], 400);
-//     }
-
-//     $apiKey = env('OPENWEATHERMAP_API_KEY');
-//     $weatherApiUrl = env('OPENWEATHERMAP_API_URL');
-
-//     $response = Http::get("$weatherApiUrl/weather", [
-//         'q' => $city,
-//         'appid' => $apiKey,
-//         'units' => 'metric'
-//     ]);
-
-//     if ($response->failed()) {
-//         return response()->json(['error' => 'Unable to fetch weather data'], 500);
-//     }
-
-//     return $response->json();
-// });
-
 
 
 /*
