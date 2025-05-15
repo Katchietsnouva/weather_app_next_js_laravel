@@ -45,11 +45,11 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Katchietsnouva/weather_app_next_js_laravel/
+   git clone https://github.com/Katchietsnouva/front_end/
 
 2. Navigate to the front end folder of the application:
     ```bash
-    cd weather_app_next_js_laravel
+    cd front_end
 
 3. Install the packages:
     ```bash
@@ -68,7 +68,7 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
 
 4. In the second terminal, navigate to the front end folder of the application:
     ```bash
-    cd weather_app_next_js_laravel
+    cd front_end
 
 5. Then run the following
     ```bash
