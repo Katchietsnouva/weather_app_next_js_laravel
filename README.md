@@ -49,7 +49,7 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
    git clone https://github.com/Katchietsnouva/weather_app_next_js_laravel/
 
 2. Open 2 terminals
-3. In the 1st terminal, navigate to the api folder:
+3. In the 1st terminal, navigate to the api  folder (backend end part folder of our application):
     ```bash
    cd api
 
@@ -57,7 +57,7 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
     ```bash
     php artisan serve
 
-5. In the second terminal, navigate to the front end of the application:
+5. In the second terminal, navigate to the front end folder of the application:
     ```bash
     cd weather_app_next_js_laravel
 
