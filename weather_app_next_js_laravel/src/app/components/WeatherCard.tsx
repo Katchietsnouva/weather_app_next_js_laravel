@@ -1,45 +1,45 @@
-import React from 'react';
-
-interface WeatherData {
-    name: string;
-    main: {
-        temp: number;
-        humidity: number;
-    };
-    weather: {
-        description: string;
-        icon: string;
-    }[];
-    wind: {
-        speed: number;
-    };
+import Image from "next/image";
+interface WeatherEntry {
+    dt_txt: string;
+    main: { temp: number; humidity: number };
+    weather: { description: string; icon: string }[];
+    wind: { speed: number; deg: number };
 }
 
 interface WeatherCardProps {
-    data: WeatherData;
-    unit: 'C' | 'F';
+    entry: unknown; 
+    unit: "C" | "F";
+    convertTemp: (tempC: number) => number;
+}
+function isWeatherEntry(entry: unknown): entry is WeatherEntry {
+    return (
+        typeof entry === "object" &&
+        entry !== null &&
+        "dt_txt" in entry &&
+        "main" in entry &&
+        "weather" in entry &&
+        "wind" in entry
+    );
 }
 
-const WeatherCard: React.FC<WeatherCardProps> = ({ data, unit }) => {
-    const { name, main, weather, wind } = data;
-    const iconUrl = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
-
-    const temperature = unit === 'C' ? main.temp : (main.temp * 9) / 5 + 32;
+export const WeatherCard = ({ entry, unit, convertTemp }: WeatherCardProps) => {
+    if (!isWeatherEntry(entry)) {
+        return <div className="text-red-400">Invalid weather data</div>;
+    }
 
     return (
-        <div className="card bg-primary text-primary-content p-6 shadow-lg max-w-md mx-auto">
-            <div className="flex items-center justify-between">
-                <h2 className="text-2xl font-bold">{name}</h2>
-                <img src={iconUrl} alt={weather[0].description} className="w-16 h-16" />
-            </div>
-            <p className="text-lg capitalize">{weather[0].description}</p>
-            <div className="mt-4">
-                <p>🌡️ Temperature: {temperature.toFixed(1)}°{unit}</p>
-                <p>💧 Humidity: {main.humidity}%</p>
-                <p>💨 Wind Speed: {wind.speed} m/s</p>
-            </div>
+        <div className="bg-gray-800 rounded-2xl shadow-lg p-2 text-center hover:bg-gray-700 transition-all">
+            <p className="text-xl font-semibold mb-3">{new Date(entry.dt_txt).toDateString()}</p>
+            <Image
+                src={`https://openweathermap.org/img/wn/${entry.weather[0].icon}@4x.png`}
+                alt="Weather Icon"
+                width={300}
+                height={300}
+                className="mx-auto"
+            />
+            <p className="text-3xl font-bold my-10">
+                {convertTemp(entry.main.temp).toFixed(1)}°{unit}
+            </p>
         </div>
     );
 };
-
-export default WeatherCard;
