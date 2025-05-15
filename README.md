@@ -81,3 +81,19 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
 7. You shall see the page load.
 8. Type your city, town or county for whose wether you want ot find 
 9. For example you can search for Nairobi, Accra, Narok, Kisumu, Mombasa, Kiambu, London, Washington DC, etc
+
+### Confirmation of website working
+
+1. Open another terminal and Naivigate to the screenshots of the website test folder
+    ```bash
+    cd screenshots of the website test
+
+2. If you are in windows type the following:
+    ```bash
+    explorer .
+
+3. If you are in Linux type the following:
+    ```bash
+    nautilus .
+
+4. VIew the working test of the website application screenshots.
