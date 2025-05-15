@@ -37,7 +37,7 @@ export default function Home() {
 
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/weather?city=${city}`);
-      if (!res.ok) throw new Error("Network Error or server Error");
+      if (!res.ok) throw new Error("Network Error or server Error or area not located in the data");
       const data = await res.json();
       setWeather(data);
     } catch (err: unknown) {
