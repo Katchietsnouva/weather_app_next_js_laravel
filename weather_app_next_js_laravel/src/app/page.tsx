@@ -60,14 +60,14 @@ export default function Home() {
     return Object.entries(days)
       .filter(([date]) => date !== today)
       .slice(0, 3)
-      .map(([_, values]) => values[4]);
+      .map(([, values]) => values[4]);
   };
 
   const forecastCards = getNext3Days();
 
   const convertTemp = (tempC: number) => (unit === "C" ? tempC : (tempC * 9) / 5 + 32);
 
-  const convertWindSpeed = (speedMs: number) => (speedMs * 3.6).toFixed(1); // km/h
+  const convertWindSpeed = (speedMs: number) => (speedMs * 3.6).toFixed(1); 
 
   const getCardinalDirection = (deg: number) => {
     const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
