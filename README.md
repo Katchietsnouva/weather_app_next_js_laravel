@@ -42,33 +42,42 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
 
 ## Installation
 
-### Frontend Setup (Next.js)
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/Katchietsnouva/weather_app_next_js_laravel/
 
-2. Open 2 terminals
-3. In the 1st terminal, navigate to the api  folder (backend end part folder of our application):
-    ```bash
-   cd api
-
-4. Then run the following:
-    ```bash
-    php artisan serve
-
-5. In the second terminal, navigate to the front end folder of the application:
+2. Navigate to the front end folder of the application:
     ```bash
     cd weather_app_next_js_laravel
 
-6. Then run the following
+3. Install the packages:
+    ```bash
+    npm install
+
+### Frontend (Next.js) and Backend Setup (Laravel)
+
+1. Open 2 terminals
+2. In the 1st terminal, navigate to the api  folder (backend end part folder of our application):
+    ```bash
+   cd api
+
+3. Then run the following:
+    ```bash
+    php artisan serve
+
+4. In the second terminal, navigate to the front end folder of the application:
+    ```bash
+    cd weather_app_next_js_laravel
+
+5. Then run the following
     ```bash
     npm run dev
 
-7. Go to your favorite browser and copy paste the following:
+6. Go to your favorite browser and copy paste the following:
     ```bash
     http://localhost:3000/
 
-8. You shall see the page load.
-9. Type your city, town or county for whose wether you want ot find 
-10. For example you can search for Nairobi, Accra, Narok, Kisumu, Mombasa, Kiambu, London, Washington DC, etc
+7. You shall see the page load.
+8. Type your city, town or county for whose wether you want ot find 
+9. For example you can search for Nairobi, Accra, Narok, Kisumu, Mombasa, Kiambu, London, Washington DC, etc
