@@ -55,6 +55,8 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
     ```bash
     npm install
 
+4. CLose the terminal
+
 ### Frontend (Next.js) and Backend Setup (Laravel)
 
 1. Open 2 terminals
