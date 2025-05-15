@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/weather_app_next_js_laravel/node_modules
+/weather_app_next_js_laravel/.pnp
+.pnp.*
+.yarn/*
+!weather_app_next_js_laravel!.yarn/patches
+!weather_app_next_js_laravel!.yarn/plugins
+!weather_app_next_js_laravel!.yarn/releases
+!weather_app_next_js_laravel!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/weather_app_next_js_laravel/.next/
+/weather_app_next_js_laravel/out/
+
+# production
+/weather_app_next_js_laravel/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+/weather_app_next_js_laravelnpm-debug.log*
+/weather_app_next_js_laravelyarn-debug.log*
+/weather_app_next_js_laravelyarn-error.log*
+/weather_app_next_js_laravel.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+/weather_app_next_js_laravel.env*
+
+# vercel
+/weather_app_next_js_laravel.vercel
+
+# typescript
+*.tsbuildinfo
+/weather_app_next_js_laravelnext-env.d.ts
