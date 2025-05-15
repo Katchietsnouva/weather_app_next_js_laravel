@@ -45,7 +45,7 @@ This is a **Weather App** built with **Next.js** (frontend) and **Laravel** (bac
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Katchietsnouva/front_end/
+   git clone https://github.com/Katchietsnouva/weather_app_next_js_laravel/
 
 2. Navigate to the front end folder of the application:
     ```bash
